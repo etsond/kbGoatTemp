@@ -12,7 +12,7 @@ const openModal = function(){
         overlay.classList.remove("hidden");
     };
 
-    //iterating through the buttons to listen to when the buttons ar clicked
+    //iterating through the buttons to listen to when the buttons are clicked
 for (let i=0; i < btnsOpenModal.length; i++){
     btnsOpenModal[i].addEventListener("click", openModal);
 
@@ -23,11 +23,11 @@ const closeModal = function(){
     overlay.classList.add("hidden")
 
 }
-
+//adding the click listener
 btnCloseModal.addEventListener("click", closeModal)
 overlay.addEventListener("click", closeModal)
 
-//funcction for when the user press the escape button 
+//function for when the user press the escape key using the keydown listener
 document.addEventListener("keydown", function(e){
     if(e.key === 'Escape' && !modal.classList.contains("hidden")){
     closeModal();
